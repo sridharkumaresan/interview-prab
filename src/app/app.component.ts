@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'interview-prab';
+  start() {
+    console.log('Start Test');
+  }
+  handleEvent(event: any) {
+    console.log('event', event);
+  }
 }

@@ -45,6 +45,7 @@
     background-color: #1976d2;
     color: white;
     font-weight: 600;
+    padding-right: 1rem;
   }
 
   .toolbar img {
@@ -307,6 +308,10 @@
   />
   <span>Interview Prabhakar</span>
     <div class="spacer"></div>
+    <countdown #cd1 [config]="{leftTime: 7200, demand: true}" (event)="handleEvent($event)"></countdown>
+    <button #btn1 mat-flat-button (click)="cd1.begin(); btn1.disabled=true;" style="margin-left: 0.5rem;">
+      Start Test
+    </button>
 </div>
 
 <div class="content" role="main">
